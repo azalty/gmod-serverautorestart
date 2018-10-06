@@ -13,4 +13,4 @@ Nothing. You just need to configure the addon to set the time you want
 serverautorestart\lua\autorun\server\serverautorestart.lua (at the top of the file)
 
 ## Other features?
-**- Includes a manual restart command "restartserver" (disabled by default) for superadmins.
+**- Includes a manual restart command "restartserver" (disabled by default) for superadmins.**
