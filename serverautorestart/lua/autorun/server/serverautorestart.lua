@@ -2,8 +2,8 @@
 		ServerAutoRestart
 	
 	Version 1.1
-	* Download updates here : https://thewalkingteam.ludosoft.org/index.php?threads/serverautorestart.201/ *
-	Author: Steam : [FR] rlevet    Discord : rlevet#9721
+	* Download updates here : https://github.com/rlevet/gmod-serverautorestart *
+	Author: Steam : [FR] rlevet    Discord : rlevet#9721    Github : rlevet
 	
 ** Put this in addons folder
 directory should be
