@@ -7,7 +7,7 @@ Go to releases (https://github.com/rlevet/gmod-serverautorestart/releases) or do
 Drag and drop the folder "serverautorestart" in addons.
 
 ## Needed
-Nothing. You just need to configure the addon to set the time you want
+Nothing. You just need to configure the addon to set the time you want *(uses 24h time format)*
 
 ## Configuration
 serverautorestart\lua\autorun\server\serverautorestart.lua (at the top of the file)
