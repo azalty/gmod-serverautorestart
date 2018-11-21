@@ -60,8 +60,7 @@ local ServerAutoRestart_LangRes = "[AutoRestart] RESTARTING THE SERVER !"
 --------------------------]]--
 
 
-timer.Create( "ServerAutoRestart", 60, 0, ServerAutoRestart ) -- Checks every minute to restart
-function ServerAutoRestart()
+function ServerAutoRestartFunc()
 	if ServerAutoRestart_Enable then
 	if ServerAutoRestart_AdvertBefore then
 		if os.date( "%H:%M" ) == ServerAutoRestart_AdvertTime then
@@ -147,6 +146,7 @@ function ServerAutoRestart()
 	end
 	end
 end
+timer.Create( "ServerAutoRestartTimer", 60, 0, ServerAutoRestartFunc ) -- Checks every minute to restart
 if ServerAutoRestart_EnableCommand then
 	concommand.Add( "restartserver", function( ply, cmd, args )
 		if ply:IsSuperAdmin() then
