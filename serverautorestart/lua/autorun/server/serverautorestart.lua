@@ -18,13 +18,14 @@ Original code here (https://forums.ulyssesmod.net/index.php?topic=7057.0) => Lua
 		Configuration
 --------------------------]]--
 
-local ServerAutoRestart = {} -- DO NOT TOUCH
+local !ServerAutoRestart or ServerAutoRestart = {} -- DO NOT TOUCH
 
 
 -- You can edit here now (true means yes, false means no)
 
 local ServerAutoRestart_Enable = true
-local ServerAutoRestart_EnableCommand = false -- [Recommended] Add a console command => "restartserver" that can be only run by superadmin and will restart server
+local ServerAutoRestart_EnableCommand = false -- [Recommended]
+local ServerAutoRestartCommand = "restartserver"
 local ServerAutoRestart_Time = "4:00" -- at what hour it will restart (use 24h format so 4:00 AM will be 4:00 and 4:00 PM will be 12h+4 = 16:00 PM)
 -- Warning, the server will restart 1 min. after the actual time to say that the server will restart. If you WANT it to restart a 4:00 just put 3:59
 
@@ -148,7 +149,7 @@ function ServerAutoRestartFunc()
 end
 timer.Create( "ServerAutoRestartTimer", 60, 0, ServerAutoRestartFunc ) -- Checks every minute to restart
 if ServerAutoRestart_EnableCommand then
-	concommand.Add( "restartserver", function( ply, cmd, args )
+	concommand.Add( ServerAutoRestartCommand, function( ply, cmd, args )
 		if ply:IsSuperAdmin() then
 			PrintMessage( HUD_PRINTTALK, ServerAutoRestart_LangRes )
 			timer.Simple( 0.5, function()
