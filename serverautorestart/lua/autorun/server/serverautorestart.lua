@@ -1,7 +1,7 @@
 --[[------------------------------
 		ServerAutoRestart
 	
-	Version 1.1
+	Version 1.2
 	* Download updates here : https://github.com/rlevet/gmod-serverautorestart *
 	Author: Steam : [FR] rlevet    Discord : rlevet#9721    Github : rlevet
 	
@@ -25,27 +25,27 @@ local ServerAutoRestart = {} -- DO NOT TOUCH
 
 local ServerAutoRestart_Enable = true
 local ServerAutoRestart_EnableCommand = false -- [Recommended] Add a console command => "restartserver" that can be only run by superadmin and will restart server
-local ServerAutoRestart_Time = "4:00" -- at what hour it will restart (use 24h format so 4:00 AM will be 4:00 and 4:00 PM will be 12h+4 = 16:00 PM)
+local ServerAutoRestart_Time = "04:00" -- at what hour it will restart (use 24h format so 04:00 AM will be 04:00 and 04:00 PM will be 12h+4 = 16:00 PM)
 -- Warning, the server will restart 1 min. after the actual time to say that the server will restart. If you WANT it to restart a 4:00 just put 3:59
 
 local ServerAutoRestart_AdvertBefore = true
-local ServerAutoRestart_AdvertTime = "3:45" -- Put when you want to advert that there will be a restart
+local ServerAutoRestart_AdvertTime = "03:45" -- Put when you want to advert that there will be a restart
 local ServerAutoRestart_AdvertMsg = "[AutoRestart] The server will restart in 15 minutes."
 
 local ServerAutoRestart_AdvertBefore2 = true
-local ServerAutoRestart_AdvertTime2 = "3:50" -- Put when you want to advert that there will be a restart
+local ServerAutoRestart_AdvertTime2 = "03:50" -- Put when you want to advert that there will be a restart
 local ServerAutoRestart_AdvertMsg2 = "[AutoRestart] The server will restart in 10 minutes."
 
 local ServerAutoRestart_AdvertBefore3 = true
-local ServerAutoRestart_AdvertTime3 = "3:55" -- Put when you want to advert that there will be a restart
+local ServerAutoRestart_AdvertTime3 = "03:55" -- Put when you want to advert that there will be a restart
 local ServerAutoRestart_AdvertMsg3 = "[AutoRestart] The server will restart in 5 minutes."
 
 local ServerAutoRestart_AdvertBefore4 = false
-local ServerAutoRestart_AdvertTime4 = "H:MM" -- Put when you want to advert that there will be a restart
+local ServerAutoRestart_AdvertTime4 = "HH:MM" -- Put when you want to advert that there will be a restart
 local ServerAutoRestart_AdvertMsg4 = "[AutoRestart] The server will restart in X minutes."
 
 local ServerAutoRestart_AdvertBefore5 = false
-local ServerAutoRestart_AdvertTime5 = "H:MM" -- Put when you want to advert that there will be a restart
+local ServerAutoRestart_AdvertTime5 = "HH:MM" -- Put when you want to advert that there will be a restart
 local ServerAutoRestart_AdvertMsg5 = "[AutoRestart] The server will restart in X minutes."
 
 local ServerAutoRestart_LangMin = "[AutoRestart] The server will restart in 1 minute !"
